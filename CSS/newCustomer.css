@@ -1,0 +1,78 @@
+html {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-image: url("https://freefrontend.com/assets/img/css-triangle-backgrounds/2-triangles-background.png");
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  list-style-type: none;
+  background: black;
+  color: white;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+li a {
+  padding-right: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  max-width: 75%;
+  margin: 10% auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+b {
+  color: red;
+}
+h1 {
+  font-family: "Helvetica Neue", "Helvet";
+  text-align: center;
+}
+
+#form-item {
+  display: flex;
+  flex-direction: column;
+}
+input {
+  width: 120px;
+  margin: 0 auto;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+label {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+button {
+  width: auto;
+  margin: 1rem auto 0 auto;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+@media (max-width: 675px) {
+  form {
+    width: 60%;
+  }
+}
