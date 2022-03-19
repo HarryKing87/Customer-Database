@@ -1,9 +1,6 @@
 <?php
 session_start();
-
-?>
-
-
+?> 
 <?php
 
 if (isset($_POST['login'])) {
@@ -31,7 +28,6 @@ if (isset($_POST['login'])) {
       $password=$row['PASSWORD'];
   }
     
-   //echo "Operation done successfully\n";
    $db->close();
 
   if($username == $_POST["username"] && $_POST["password"] == $password) {
@@ -43,7 +39,6 @@ else {
   echo "<script>alert('Wrong username or password')</script>";
 }
 }
-
 ?>
 
 
