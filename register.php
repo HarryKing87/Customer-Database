@@ -1,4 +1,12 @@
 <?php
+$toBeFilteredUsername = $_POST['username'];
+$toBeFilteredPassword = $_POST['password'];
+$toBeFilteredMail = $_POST['mail'];
+$cleanUsername = filter_var($toBeFilteredUsername, FILTER_SANITIZE_STRING);
+$cleanPassword = filter_var($toBeFilteredPassword, FILTER_SANITIZE_STRING);
+$cleanMail = filter_var($toBeFilteredMail, FILTER_SANITIZE_EMAIL);
+
+
 // Check whether the wanted values are set or not. (Prevent form from submitting itself everytime the user reloads.)
 if(isset($_POST['username']) && isset($_POST['mail']) && isset($_POST['password'])) {
 
@@ -17,7 +25,7 @@ if (!$database) {
 
 
 $sqlCommand = "INSERT INTO users (USERNAME,MAIL,PASSWORD) 
-                VALUES ('".$_POST['username']."', '".$_POST['mail']."', '".$_POST['password']."');";
+                VALUES ('".$cleanUsername."', '".$cleanMail."', '".$cleanPassword."');";
 
 
 $result = $database->exec($sqlCommand);
