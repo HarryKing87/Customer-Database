@@ -1,6 +1,14 @@
-<?php 
+<?php
 session_start();
-class Users extends SQLite3
+
+?>
+
+
+<?php
+
+if (isset($_POST['login'])) {
+  // DATABASE CONNECTION
+  class Users extends SQLite3
    {
       function __construct()
       {
@@ -18,28 +26,27 @@ class Users extends SQLite3
 
 
    $ret = $db->query($sql);
-   while($row = $ret->fetchArray(SQLITE3_ASSOC) ){
+   while($row = $ret->fetchArray(SQLITE3_ASSOC)){
       $username=$row["USERNAME"];
       $password=$row['PASSWORD'];
   }
-    if ($id!=""){
-        if ($password==$_POST["password"]){
-           $_SESSION["login"]=$username;
-           //header('Location: index.php');   
-           if ($_POST["username"] == $username) {
-             echo "USERNAME OK!";
-           }
-        }else{
-          
-          echo "Wrong Password";
-        }
-      }else{
-       echo "";
-      }
+    
    //echo "Operation done successfully\n";
    $db->close();
 
+  if($username == $_POST["username"] && $_POST["password"] == $password) {
+
+    echo "<script>window.open('http://localhost:8000/dashboard.php','_self')</script>";  
+    $_SESSION['username']=$username;
+ } 
+else {
+  echo "<script>alert('Wrong username or password')</script>";
+}
+}
+
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -66,24 +73,27 @@ class Users extends SQLite3
       <label for="password">Password:</label>
       <input type="password" id="password" placeholder="Enter password" name="password">
     </div>   
-    <button type="submit">Submit</button>
+    <button type="submit" name="login">Login</button>
   </form>
 </div>
 
-<p><?php
-  if($username == $_POST["username"] && $_POST["password"] == $password) {
-    echo "Success!";
-  } 
-  else {
-    echo "<h5>
-    Unsuccessfull Login!
-    </h5>";
-  }
-?></p>
+<p></p>
 
 <div class="navigation">
   <button><a href="login.php">Login</a></button>
   <button><a href="register.php">Register</a></button>
 </div>
+<script>
+    // XML POST request on window load
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (xhttp.readyState == 4 && xhttp.status == 200) {
+            console.log(xhttp.responseText);
+        }
+    };
+    xhttp.open('POST', "dashboard.php", true);
+    xhttp.setRequestHeader('Content-Type', 'application/');
+    xhttp.send();
+</script>
 </body>
 </html>

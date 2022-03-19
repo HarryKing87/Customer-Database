@@ -1,3 +1,11 @@
+<?php  
+session_start();  
+  
+if(!$_SESSION['username'])  
+{  
+    header("Location: http://localhost:8000/login.php");//redirect to the login page to secure the welcome page without login access.  
+}  
+?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +21,7 @@
             <li><a href="newCustomer.php">Insert Customers</a></li>
             <li><a href="expenses.php">Customer Expenses</a></li>
             <li><a href="addExpenses.php">Add Expenses</a></li>
+            <li name="logout"><a href="logout.php">Logout</a></li>
     </div>
     <!--
     <button id="arrowDown">Sort Values</button>
@@ -31,10 +40,7 @@
     </form>
 -->
     <?php 
-
-
-
-
+    echo $_POST["username"];
     class Users extends SQLite3 {
         function __construct() {
             $this->open("customers.db");
