@@ -59,7 +59,7 @@ else {
 
 <div class="container">
   <form role="form" action="" method="post">
-  <h1 style="margin-left: auto; margin-right:auto; margin-top: -5%; margin-bottom:1rem; font-family: 'Smooch Sans', sans-serif; color:white;">Login</h1>
+  <h1 style="margin-left: auto; margin-right:auto; margin-top: -5%; margin-bottom:2rem; font-family: 'Smooch Sans', sans-serif; color:white; text-align:center;">Login</h1>
     <div>
       <label for="username">Username:</label>
       <input type="text" id="username" placeholder="Enter Username" name="username">

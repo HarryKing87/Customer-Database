@@ -60,11 +60,11 @@ $database->close();
 <form method="post" action="">
 <h1 style="margin-left: auto; margin-right:auto; margin-top: -5%; margin-bottom:1rem; font-family: 'Smooch Sans', sans-serif; color:white;text-align:center;">Register</h1>
 <label for="username">Username</label>
-<input type="text" name="username" id="username">
+<input type="text" name="username" id="username" placeholder="Username" required>
 <label for="mail">E-mail</label>
-<input type="email" name="mail" id="mail">
+<input type="email" name="mail" id="mail" placeholder="Email" required>
 <label for="password">Password</label>
-<input type="password" name="password">
+<input type="password" name="password" placeholder="Password" required>
 <button type="submit" id="submitButton">Submit</button>
 </form>
 </div>

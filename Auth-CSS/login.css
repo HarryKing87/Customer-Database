@@ -14,12 +14,11 @@ h1 {
   font-family: "Smooch Sans", sans-serif;
 }
 .container {
-  display: flex;
-  flex-direction: column;
   border: 2px solid black;
   margin: 2rem auto;
-  padding: 10%;
-  max-width: 50%;
+  width: 100%;
+  padding: 5%;
+  max-width: 25%;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
@@ -30,10 +29,14 @@ h1 {
 }
 form {
   margin: 0.75rem auto;
+  width: 100%;
 }
 
 input {
+  display: flex;
+  justify-content: center;
   margin: 1rem auto;
+  border: 2px solid magenta;
 }
 .navigation {
   display: flex;
@@ -50,4 +53,17 @@ button[type="submit"] {
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+@media (max-width: 675px) {
+  .container {
+    max-width: 75%;
+    margin-top: 4rem;
+  }
+
+  input {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+  }
 }

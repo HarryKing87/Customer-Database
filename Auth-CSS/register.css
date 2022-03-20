@@ -6,16 +6,15 @@ body {
     rgba(148, 187, 233, 1) 100%
   );
 }
+
 form {
   display: flex;
   flex-direction: column;
-  width: 50%;
-  max-width: 50%;
+  max-width: 25%;
   margin: 1rem auto;
   border: 2px solid black;
   border-radius: 10px;
-  padding: 10%;
-  max-width: 50%;
+  padding: 40px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -56,4 +55,21 @@ button[type="submit"] {
   display: flex;
   text-align: center;
   justify-content: center;
+}
+
+@media (max-width: 675px) {
+  .container {
+    max-width: 75%;
+    margin: 4rem auto;
+  }
+
+  form {
+    max-width: 50%;
+  }
+
+  input {
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px;
+  }
 }

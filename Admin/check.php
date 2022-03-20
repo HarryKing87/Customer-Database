@@ -16,7 +16,7 @@ if (!$db) {
 }
 
 
-$sql = "SELECT * FROM CUSTOMER_FINANCES";
+$sql = "SELECT * FROM CUSTOMERS";
 
 $result = $db->query($sql);
 
