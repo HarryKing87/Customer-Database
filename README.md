@@ -1,6 +1,6 @@
 # Customer-Database
 
-# Frontend
+# Frontend ☀️
 <ul>
   <li>HTML</li>
   <li>CSS</li>
@@ -8,7 +8,7 @@
   <li>Javascript</li>
 </ul>
 
-# Backend
+# Backend 🌑
 <ul>
   <li>PHP</li>
   <li>SQL</li>
