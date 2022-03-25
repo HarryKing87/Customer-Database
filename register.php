@@ -48,29 +48,48 @@ $database->close();
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="Auth-CSS/register.css">
+<!--<link rel="stylesheet" href="Auth-CSS/register.css">-->
 <title>Register | PHP Auth</title>
 </head>
 <body>
-<div class="container">
-<form method="post" action="">
-<h1 style="margin-left: auto; margin-right:auto; margin-top: -5%; margin-bottom:1rem; font-family: 'Smooch Sans', sans-serif; color:white;text-align:center;">Register</h1>
-<label for="username">Username</label>
-<input type="text" name="username" id="username" placeholder="Username" required>
-<label for="mail">E-mail</label>
-<input type="email" name="mail" id="mail" placeholder="Email" required>
-<label for="password">Password</label>
-<input type="password" name="password" placeholder="Password" required>
-<button type="submit" id="submitButton">Submit</button>
-</form>
-</div>
-<div class="navigation">
-  <button><a href="login.php">Login</a></button>
-  <button><a href="register.php">Register</a></button>
-</div>
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+      <div
+        class="px-8 py-4 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3"
+      >
+        <h3 class="text-2xl font-bold text-center">Join us</h3>
+        <form method="POST">
+            <div class="mt-4">
+                <div>
+                    <label class="block" for="username">Username<label>
+                            <input type="text" placeholder="Name"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600" name="username" id="username">
+                </div>
+                <div class="mt-4">
+                    <label class="block" for="mail">Email<label>
+                            <input type="email" name="mail" id="mail" required placeholder="Email"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                </div>
+                <div class="mt-4">
+                    <label class="block" for="password">Password<label>
+                            <input type="password" name="password" required placeholder="Password"
+                                class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600">
+                </div>
+                <div class="flex">
+                    <button type="submit" id="submitButton" class="w-full px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Create
+                        Account</button>
+                </div>
+                <div class="mt-6 text-grey-dark">
+                    Already have an account?
+                    <a class="text-blue-600 hover:underline" href="http://localhost:8000/login.php">
+                        Log in
+                    </a>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
 </body>
 </html>
