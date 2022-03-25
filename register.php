@@ -20,7 +20,7 @@ $database = new Users();
 if (!$database) {
     echo $database->lastErrorMsg();
 } else {
-    echo "<span>Database opened successfully!</span>\n";
+    echo "";
 }
 
 
