@@ -1,6 +1,6 @@
 <?php  
 session_start();  
-  
+
 if(!$_SESSION['username'])  
 {  
     header("Location: http://localhost:8000/login.php");//redirect to the login page to secure the welcome page without login access.  
@@ -26,7 +26,7 @@ if(!$_SESSION['username'])
         <h1>Insert new customer expenses</h1>
         
         <label for="name">Customer Name</label>
-        <input type="text" name="name" id="name">
+        <select name="name" id="name"><?php require('Admin/showSelector.php');?></select>
         
         <label for="expenses">Customer Expenses</label>
         <input type="number" name="expenses" id="expenses">

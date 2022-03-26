@@ -6,7 +6,7 @@ if(!$_SESSION['username'])
     header("Location: http://localhost:8000/login.php");//redirect to the login page to secure the welcome page without login access.  
 }  
 ?> 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
