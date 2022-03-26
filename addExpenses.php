@@ -42,7 +42,7 @@ if(!$_SESSION['username'])
 					<!-- Mobile menu button -->
 					<div class="md:hidden flex items-center">
 						<button class="outline-none mobile-menu-button">
-						<svg class=" w-6 h-6 text-black dark:text-white hover:text-green-500 "
+						<svg class=" w-6 h-6 text-black dark:text-white hover:text-indigo-500  "
 							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"
@@ -60,11 +60,11 @@ if(!$_SESSION['username'])
 			<!-- mobile menu -->
 			<div class="hidden mobile-menu">
 				<ul class="">
-					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Customer</a></li>
-					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Customer Expenses</a></li>
-					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Expenses</a></li>
-					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Logout</a></li>
+					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-indigo-500 font-semibold dark:text-white">Home</a></li>
+					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Customer</a></li>
+					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Customer Expenses</a></li>
+					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Expenses</a></li>
+					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Logout</a></li>
                 </ul>
 			</div>
 			<script>
@@ -80,10 +80,10 @@ if(!$_SESSION['username'])
         <h1>Insert new customer expenses</h1>
         
         <label for="name">Customer Name</label>
-        <select name="name" id="name"><?php require('Admin/showSelector.php');?></select>
+        <select name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"><?php require('Admin/showSelector.php');?></select>
         
         <label for="expenses">Customer Expenses</label>
-        <input type="number" name="expenses" id="expenses">
+        <input type="number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="block py-2.5 px-0 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 dark:bg-gray-700 dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" name="expenses" id="expenses">
         
         
         <button type="submit" class="my-4 border-2 rounded hover:bg-white">Submit</button>

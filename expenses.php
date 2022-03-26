@@ -72,7 +72,7 @@ html {
 					<!-- Mobile menu button -->
 					<div class="md:hidden flex items-center">
 						<button class="outline-none mobile-menu-button">
-						<svg class=" w-6 h-6 text-black dark:text-white hover:text-green-500 "
+						<svg class=" w-6 h-6 text-black dark:text-white hover:text-indigo-500 "
 							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"
@@ -90,11 +90,11 @@ html {
 			<!-- mobile menu -->
 			<div class="hidden mobile-menu">
 				<ul class="">
-					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Customer</a></li>
-					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Customer Expenses</a></li>
-					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Expenses</a></li>
-					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Logout</a></li>
+					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-indigo-500 font-semibold dark:text-white">Home</a></li>
+					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Customer</a></li>
+					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Customer Expenses</a></li>
+					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Expenses</a></li>
+					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Logout</a></li>
                 </ul>
 			</div>
 			<script>

@@ -12,7 +12,6 @@ if(!$_SESSION['username'])
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/dashboard.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Dashboard | Customer Expenses</title>
 </head>
@@ -43,7 +42,7 @@ if(!$_SESSION['username'])
 					<!-- Mobile menu button -->
 					<div class="md:hidden flex items-center">
 						<button class="outline-none mobile-menu-button">
-						<svg class=" w-6 h-6 text-black dark:text-white hover:text-green-500 "
+						<svg class=" w-6 h-6 text-black dark:text-white hover:text-indigo-500 "
 							x-show="!showMenu"
 							fill="none"
 							stroke-linecap="round"
@@ -61,11 +60,11 @@ if(!$_SESSION['username'])
 			<!-- mobile menu -->
 			<div class="hidden mobile-menu">
 				<ul class="">
-					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Customer</a></li>
-					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Customer Expenses</a></li>
-					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Add Expenses</a></li>
-					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Logout</a></li>
+					<li class="active"><a href="dashboard.php" class="block text-sm px-2 py-4 text-white bg-indigo-500 font-semibold dark:text-white">Home</a></li>
+					<li><a href="newCustomer.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Customer</a></li>
+					<li><a href="expenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Customer Expenses</a></li>
+					<li><a href="addExpenses.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Add Expenses</a></li>
+					<li><a href="logout.php" class="block text-sm px-2 py-4 hover:bg-indigo-500 transition duration-300 dark:text-white">Logout</a></li>
                 </ul>
 			</div>
 			<script>
@@ -159,22 +158,27 @@ if(!$_SESSION['username'])
     // --- END OF SORTING CODE
     $sql = "SELECT * FROM CUSTOMERS ORDER BY address ASC";
     $result = $db->query($sql);
-    echo "<table class='table-auto'>
+    echo "<div class='relative overflow-x-auto shadow-md sm:rounded-lg'>";
+    echo "<table class='w-full text-sm text-left text-gray-500 dark:text-gray-400'>
+    <thead class='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
     <tr>
-    <th>ID</th>
-    <th>NAME</th>
-    <th>AGE</th>
-    <th>ADDRESS</th>";
-    
+    <th class='px-6 py-3'>ID</th>
+    <th class='px-6 py-3'>NAME</th>
+    <th class='px-6 py-3'>AGE</th>
+    <th class='px-6 py-3'>ADDRESS</th>
+    </thead>";
+    echo "<tbody>";
     while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
-        echo "<tr>";
-        echo "<td>" . $row['ID'] . "</td>" ."\n";
-        echo "<td>" . $row['NAME'] . "</td>" ."\n";
-        echo "<td>" . $row['AGE'] . "</td>"  ."\n";
-        echo "<td>" . $row['ADDRESS'] . "</td>"  ."\n";
+        echo "<tr class='bg-white border-b dark:bg-gray-800 dark:border-gray-700'>";
+        echo "<td class='px-6 py-4'>" . $row['ID'] . "</td>" ."\n";
+        echo "<td class='px-6 py-4'>" . $row['NAME'] . "</td>" ."\n";
+        echo "<td class='px-6 py-4'>" . $row['AGE'] . "</td>"  ."\n";
+        echo "<td class='px-6 py-4'>" . $row['ADDRESS'] . "</td>"  ."\n";
         echo "</tr>";
     }
+    echo "</tbody>";
     echo "</table>";
+    echo "</div>";
     echo "<i>Database records have been shown</i>\n";
     $db->close();
     ?>
