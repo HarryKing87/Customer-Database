@@ -13,6 +13,7 @@ if(!$_SESSION['username'])
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/dashboard.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -23,6 +24,7 @@ if(!$_SESSION['username'])
             <li><a href="addExpenses.php">Add Expenses</a></li>
             <li name="logout"><a href="logout.php">Logout</a></li>
     </div>
+<div data-aos="fade-up" data-aos-duration="1500">
     <!--
     <button id="arrowDown">Sort Values</button>
     <form method="POST" id="sorting">
@@ -135,6 +137,11 @@ if(!$_SESSION['username'])
     xhttp.setRequestHeader('Content-Type', 'application/');
     xhttp.send();
 </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</div>
 </body>
 
 </html>

@@ -49,13 +49,14 @@ else {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="Auth-CSS/spinner.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
 <!--<link rel="stylesheet" href="Auth-CSS/login.css">-->
 </head>
 <body>
-
+<div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
 <div
       class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
     >
@@ -108,7 +109,8 @@ else {
               type="submit"
               name = "login"
               class="group relative w-full flex justify-center my-2 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-            >
+              id="loadButton"
+              >
               <span class="absolute left-0 inset-y-0 flex items-center pl-3">
                 <!-- Heroicon name: solid/lock-closed -->
                 <svg
