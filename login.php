@@ -54,36 +54,33 @@ else {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@500&display=swap" rel="stylesheet">
 <!--<link rel="stylesheet" href="Auth-CSS/login.css">-->
+
 </head>
 <body>
-<div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>
 <div
       class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8"
     >
       <div class="max-w-md w-full space-y-8">
 <div>
-          <img
-            class="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-            alt="Workflow"
-          />
+  <img src="front-page.svg" width="50%" style="margin:0 auto;"></img>
+          <h1 class="mt-6 text-center text-3xl font-extrabold text-indigo-500">Customer Finder</h1>
           <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Sign in to your account
           </h2>
           <p class="mt-2 text-center text-sm text-gray-600">
             Or
             <a
-              href="#"
+              href="register.php"
               class="font-medium text-indigo-600 hover:text-indigo-500"
             >
-              start your 14-day free trial
+              register here
             </a>
           </p>
         </div>
   <form role="form" action="" method="post">
   <h1 style="margin-left: auto; margin-right:auto; margin-top: -5%; margin-bottom:2rem; font-family: 'Smooch Sans', sans-serif; color:white; text-align:center;">Login</h1>
     <div>
-              <label for="username">Email address</label>
+              <label for="username" class="font-bold">Email address</label>
               <input
                 id="username"
                 name="username"
@@ -95,7 +92,7 @@ else {
             </div>
 
     <div>
-              <label for="password">Password</label>
+              <label for="password" class="font-bold">Password</label>
               <input
                 id="password"
                 name="password"

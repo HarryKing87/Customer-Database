@@ -55,10 +55,11 @@ $database->close();
 <title>Register | PHP Auth</title>
 </head>
 <body>
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
+<div class="flex items-center justify-center min-h-screen">
       <div
         class="px-8 py-4 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3"
       >
+  <img src="front-page.svg" width="50%" style="margin:0 auto;"></img>
         <h3 class="text-2xl font-bold text-center">Join us</h3>
         <form method="POST">
             <div class="mt-4">
