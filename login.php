@@ -1,8 +1,8 @@
 <?php
 session_start();
+$pdo = new PDO('sqlite:database.sqlite');
 ?> 
 <?php
-$pdo = new PDO('sqlite:database.sqlite');
 if (isset($_POST['login'])) {
   // DATABASE CONNECTION
   class Users extends SQLite3
