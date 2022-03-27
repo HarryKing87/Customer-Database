@@ -1,6 +1,5 @@
 <?php
 session_start();
-$pdo = new PDO('sqlite:database.sqlite');
 ?> 
 <?php
 if (isset($_POST['login'])) {
