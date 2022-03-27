@@ -32,7 +32,7 @@ if (isset($_POST['login'])) {
 
   if($username == $_POST["username"] && $_POST["password"] == $password) {
 
-    echo "<script>window.open('http://localhost:8000/dashboard.php','_self')</script>";  
+    echo "<script>window.open('https://customer-finder-php.herokuapp.com/dashboard.php','_self')</script>";  
     $_SESSION['username']=$username;
  } 
 else {
