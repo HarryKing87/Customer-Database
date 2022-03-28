@@ -92,7 +92,7 @@ $database->close();
                 </div>
                 <div class="mt-6 text-grey-dark">
                     Already have an account?
-                    <a class="text-blue-600 hover:underline" href="https://customer-finder-php.herokuapp.com/login.php">
+                    <a class="text-blue-600 hover:underline" href="http://localhost:8000/login.php">
                         Log in
                     </a>
                 </div>
