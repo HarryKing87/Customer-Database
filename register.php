@@ -27,7 +27,6 @@ if (!$database) {
 $sqlCommand = "INSERT INTO users (USERNAME,MAIL,PASSWORD) 
                 VALUES ('".$cleanUsername."', '".$cleanMail."', '".$cleanPassword."');";
 
-
 $result = $database->exec($sqlCommand);
 
 if (!$result) {
