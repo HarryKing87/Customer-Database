@@ -27,7 +27,16 @@ if (!$database) {
 $sqlCommand = "INSERT INTO users (USERNAME,MAIL,PASSWORD) 
                 VALUES ('".$cleanUsername."', '".$cleanMail."', '".$cleanPassword."');";
 
-$result = $database->exec($sqlCommand);
+
+
+// check if username already exists in database credentials.db
+if($database->querySingle("SELECT USERNAME FROM users WHERE USERNAME = '".$cleanUsername."'") == $cleanUsername) {
+    echo "<script>alert(
+        'Username already exists! Please choose another one.'
+    );</script>";
+} else {
+    $result = $database->exec($sqlCommand);
+}
 
 if (!$result) {
     echo $database->lastErrorMsg();
