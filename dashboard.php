@@ -3,7 +3,7 @@ session_start();
   
 if(!$_SESSION['username'])  
 {  
-    header("Location: http://localhost:8000/login.php");//redirect to the login page to secure the welcome page without login access.  
+    header("Location: login.php");//redirect to the login page to secure the welcome page without login access.  
 }  
 ?>  
 <!DOCTYPE html>
